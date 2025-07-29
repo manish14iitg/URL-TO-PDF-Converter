@@ -6,7 +6,7 @@ const JobList = ({ onSelectJob }) => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const res = await axios.get("http://localhost:5000/api/pdf/jobs");
+      const res = await axios.get("https://url-to-pdf-converter.onrender.com//api/pdf/jobs");
       setJobs(res.data);
     };
     fetchJobs();
