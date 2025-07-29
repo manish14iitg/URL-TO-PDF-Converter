@@ -15,7 +15,7 @@ const URLInput = ({ setPdfData }) => {
 
       const pollJob = async () => {
         const statusRes = await axios.get(
-          `https://url-to-pdf-converter.onrender.com//api/pdf/status/${jobId}`
+          `https://url-to-pdf-converter.onrender.com/api/pdf/status/${jobId}`
         );
         if (statusRes.data.status === "done") {
           setPdfData(statusRes.data.pdfs);
