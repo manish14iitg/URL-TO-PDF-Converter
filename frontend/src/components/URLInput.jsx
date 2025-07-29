@@ -8,14 +8,14 @@ const URLInput = ({ setPdfData }) => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/pdf/generate", {
+      const res = await axios.post("https://url-to-pdf-converter.onrender.com//api/pdf/generate", {
         url,
       });
       const jobId = res.data.jobId;
 
       const pollJob = async () => {
         const statusRes = await axios.get(
-          `http://localhost:5000/api/pdf/status/${jobId}`
+          `https://url-to-pdf-converter.onrender.com//api/pdf/status/${jobId}`
         );
         if (statusRes.data.status === "done") {
           setPdfData(statusRes.data.pdfs);
