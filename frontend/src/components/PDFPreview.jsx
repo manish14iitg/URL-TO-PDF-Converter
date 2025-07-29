@@ -5,7 +5,7 @@ const PDFPreview = ({ selectedPdf }) => {
   return (
     <div className="w-2/3 p-4">
       <iframe
-        src={`https://url-to-pdf-converter.onrender.com//${selectedPdf}`}
+        src={`https://url-to-pdf-converter.onrender.com/${selectedPdf}`}
         title="PDF Preview"
         className="w-full h-[80vh] border"
       />
