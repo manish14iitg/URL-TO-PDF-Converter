@@ -8,7 +8,7 @@ const URLInput = ({ setPdfData }) => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("https://url-to-pdf-converter.onrender.com//api/pdf/generate", {
+      const res = await axios.post("https://url-to-pdf-converter.onrender.com/api/pdf/generate", {
         url,
       });
       const jobId = res.data.jobId;
